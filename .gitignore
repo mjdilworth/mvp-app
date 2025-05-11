@@ -1,0 +1,79 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Node.js / Next.js / TailwindCSS
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.env
+.env.*
+
+# Tailwind config (optional to ignore if not versioned)
+#tailwind.config.js
+#postcss.config.js
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.log
+*.sqlite3
+.env
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+dist/
+build/
+
+# Test and linting
+pytest_cache/
+.mypy_cache/
+.tox/
+coverage.xml
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+
+# Docker
+*.pid
+*.tar
+*.bak
+docker-compose.override.yml
+docker-compose*.env
+Dockerfile.*
+docker-compose.yml
+.dockerignore
+
+# Optional: ignore full docker volumes or local-only containers
+volumes/
+db_data/
+*.local.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+
+# Logs
+logs/
+*.log
+*.out
+
+# Misc
+*.tmp
+*.cache
