@@ -5,7 +5,7 @@
 - both will be run from a single docker container with fastAPI serving the static react SPA
 
 ### structure ###
-
+```
 mvp-app/
 ├── frontend/                    # Next.js app (React SPA)
 │   ├── components/
@@ -23,7 +23,7 @@ mvp-app/
 ├── Dockerfile                   # Combines frontend + backend
 ├── .gitignore
 └── README.md
-
+```
 
 ### frontend ###
 
@@ -82,20 +82,5 @@ gcloud builds submit --tag us-central1-docker.pkg.dev/mvp-app-459119/my-repo/mvp
 
 
 
-docker build -t gcr.io/mvp-app-459119/mvp .
-docker push gcr.io/mvp-app-459119/mvp
-
-gcloud run deploy mvp \
-  --image gcr.io/mvp-app-459119/mvp \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
-
-
-gcloud builds submit --tag us-central1-docker.pkg.dev/mvp-app-459119/my-repo/mvp .
-
 gcloud run deploy mvp-app --image us-central1-docker.pkg.dev/mvp-app-459119/my-repo/mvp --platform managed --region us-central1 --allow-unauthenticated
 
-deploy service
-
-gcloud run domain-mappings create --service mvp-app --region us-central1 --domain mvp.dilly.cloud
